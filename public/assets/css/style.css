@@ -1204,19 +1204,19 @@ Testimonial
 	padding:0;
 }
 
-.company-social .social-facebook a i{background: #62c6f8;}
+.company-social .social-facebook a i{background: #428bca;}
 .company-social .social-Line a i{background: #00c300;}
 .company-social .social-twitter a i{background: #62c6f8;}
 .company-social .social-dribble a i{background: #d74980;}
 .company-social .social-deviantart a i{background: #8da356;}
-.company-social .social-google a i {background: #8da356;}
+.company-social .social-google a i {background: #d74980;}
 .company-social .social-vimeo a i {background: #51a6d3;}
 .company-social .social-facebook a:hover i {background: #4893ce;}
 .company-social .social-Line a:hover i {background: #8da356;}
 .company-social .social-twitter a:hover i {background: #82e6ff;}
 .company-social .social-dribble a:hover i {background: #f769a0;}
 .company-social .social-deviantart a:hover i {background: #adc376;}
-.company-social .social-google a:hover i {background: #333;}
+.company-social .social-google a:hover i {background: #e589ad;}
 .company-social .social-vimeo a:hover i {background: #71c6f3;}
 
 

@@ -156,8 +156,8 @@
 												<div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:50px">
 												
 													<div class="form-group">
-														<label>ชื่อ/Name</label>
-														<input type="text" name="first_name" id="first_name" class="form-control input-md">
+														<label id="label_firstname">ชื่อ/Name</label>
+														<input type="text" name="first_name" id="first_name" class="form-control input-md" >
 													</div>
 												</div>
 												<div class="col-xs-12 col-sm-12 col-md-12">
@@ -169,14 +169,27 @@
 												<div class="col-xs-12 col-sm-12 col-md-12">
 													<div class="form-group">
 														<label>บริการทางการแพทย์</label>
-														<select class="form-control h6" style="background-color: #ffd57e;"  name="product" id="product" data-form-field="Name" style="text-align: center;">
+														<select class="form-control h6" style="background-color: #ffd57e;"  name="product" id="product" onchange="showProduct()" data-form-field="Name" style="text-align: center;"  >
                
 															<option value=""  selected = "selected disabled hidden">โปรดเลือกบริการที่ท่านต้องการ</option>
 															
 														
-															<option value="การประชุมเพิ่มทุน"> เข้าพัก</option>
-															<option value="ประชุมแจ้งย้ายที่อ"> หาผู้ดูแล</option> 
-															<option value="การประชุมเปลี่ยนกรรมการ"> สนใจผลิตภัณฑ์</option>
+															<option value="เข้าพัก"> เข้าพัก</option>
+															<option value="หาผู้ดูแล"> หาผู้ดูแล</option> 
+															<option value="สนใจผลิตภัณฑ์"> สนใจผลิตภัณฑ์</option>
+																												
+														</select> 
+													</div>
+													<div id="product_group" class="form-group" style="display: none;">
+														<label>ผลิตภัณฑ์ของเรา</label>
+														<select class="form-control h6" style="background-color: #ffd57e;"  name="our_product" id="our_product" onchange="showProduct()" data-form-field="Name" style="text-align: center;"  >
+               
+															<option value=""  selected = "selected disabled hidden">โปรดเลือกผลิตภัณฑ์ที่ท่านต้องการ</option>
+															
+														
+															<option value="รถผู้ป่วย"> รถผู้ป่วย</option>
+															<option value="เตียงผู้ป่วย"> เตียงผู้ป่วย</option> 
+															<option value="ไม้ค้ำ"> ไม้ค้ำ</option>
 																												
 														</select> 
 													</div>
@@ -258,7 +271,7 @@
 							
 							<!-- <i class="fa fa-check fa-3x circled bg-skin"></i> -->
 							<h3 >เข้าระบบสมาชิกใน จังหวัดเชียงใหม่ <span class="pink bold">บริการภายใน 24 ชั่วโมง</span> ตามความต้องการ</h3>
-							<h2 class="h-bold pink">
+							<h2 class="h-bold pink" id="doctor">
 								∎   ผศ.นพ.สุรัตน์ ตันประเวช   ∎ </h2><br>
 								<h5 class="h-bold">	ที่ปรึกษาพิเศษการดูแลผู้สูงอายุ</h5>
 							
@@ -869,6 +882,28 @@
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
+<script>
+	document.getElementById("first_name").value = "Mungmee"
+document.getElementById("label_firstname").innerHTML = "สวัสดี";
+document.getElementById("doctor").innerHTML = "ประสบการณ์ด้านเวชศาสตร์มากกว่า 10 ปี ในโรงพยาบาลขั้นนำ"
+document.getElementById("doctor").style = "color:red";
+document.getElementById("doctor").className ="h1 bold";
+
+function showProduct(){
+	
+	document.getElementById("label_firstname").innerHTML = document.getElementById("product").value;
+
+	if (document.getElementById("product").value == 'สนใจผลิตภัณฑ์') {
+
+		document.getElementById("product_group").style = "display:inline";
+		
+	} else {
+		document.getElementById("product_group").style = "display:none";
+	}
+
+}
+
+</script>
 	<!-- Core JavaScript Files -->
     <script src="assets/js/jquery.min.js"></script>	 
     <script src="assets/js/bootstrap.min.js"></script>
